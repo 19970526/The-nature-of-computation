@@ -61,5 +61,6 @@ class DFADesign:
         return DFA(self.start_state, self.accept_states, self.rulebook)
 
     def accepts(self, string):
-        self.to_dfa().read_string(string).accepting()
-        return self.to_dfa()
+        self.to_dfa().read_string(string)
+        return self.to_dfa().accepting()
+
